@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins';
+    color: white;
+    font-weight: 500;
+}
+
+body,
+html {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.case {
+    z-index: 1;
+    position: absolute;
+}
+.case img{
+    border-radius: 5rem;
+}
+
+.container {
+    z-index: 2;
+    margin: 15rem 20rem;
+    height: 990px;
+    width: 450px;
+    background: #000;
+    border-radius: 5rem;
+}
+
+.notification-bar {
+    margin: 25px 25px 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.calculator {
+    margin-top: 10rem;
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+#screen {
+    position: relative;
+    top: -20rem;
+    height: 25%;
+    margin: 0rem ;
+}
+
+#screen input {
+    margin: 0px -1.5rem;
+    text-align: right;
+    height: 34rem;
+    line-height: 9rem;
+    width: 100%;
+    background: none;
+    border: none;
+    font-weight: 400;
+    font-size: 6rem;
+}
+
+#screen input::placeholder{
+    color: white;
+}
+.keypad {
+    margin: 0px 1.6rem;
+    overflow: hidden;
+    height: 75%;
+    position: relative;
+    bottom: 20rem;
+    left: 0.4rem;
+    display: grid;
+    grid-template-columns: repeat(4, 5fr);
+    gap: 0.8rem;
+}
+
+button {
+    font-size: 2rem;
+    border: none;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: #4d4c4c;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.button:nth-child(1) {
+    font-weight: 600;
+    background: #ababab;
+    color: #000;
+}
+
+.button:nth-child(2) {
+    font-weight: 600;
+    color: #000;
+    background: #ababab;
+}
+
+.button:nth-child(3) {
+    font-weight: 600;
+    color: #000;
+    background: #ababab;
+}
+.button:nth-child(4) {
+    background: orange;
+}
+.button:nth-child(8) {
+    background: orange;
+}
+.button:nth-child(12) {
+    background: orange;
+}
+.button:nth-child(16) {
+    background: orange;
+}
+.button:nth-child(19) {
+    background: orange;
+}
+
+
+
+
+.button:nth-child(17) {
+    grid-column: 1/ span 2;
+    width: 11.5rem;
+    border-radius: 2.7rem;
+}
+
+.home {
+    position: relative;
+    background: white;
+    width: 8rem;
+    height: 0.7rem;
+    border-radius: 1rem;
+    left: 35%;
+    bottom: 15rem;
+}
