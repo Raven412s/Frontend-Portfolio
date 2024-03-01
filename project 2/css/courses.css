@@ -1,0 +1,43 @@
+.coursesPage {
+    margin-top: 3rem;
+}
+
+.courses-containerPage {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.8rem;
+}
+
+.coursePage {
+    scale: 1;
+}
+
+@media screen and (max-width: 1024px) {
+    .courses-containerPage {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .coursePage {
+        scale: 0.8;
+    }
+}
+
+@media screen and (max-width: 525px) {
+    .courses {
+        margin-top: 0;
+    }
+
+    .courses-containerPage {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.1rem;
+    }
+
+    .coursePage {
+        height: 110%;width: 110%;
+    }
+
+    .coursePage .course-img{
+        padding-top: 5rem;
+    }
+}

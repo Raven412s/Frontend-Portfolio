@@ -1,0 +1,790 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --primaryColor: #6c63ff;
+    --successColor: #00bf8e;
+    --warningColor: #f7c94b;
+    --dangerColor: #f75842;
+    --dangerVariantColor: rgba(247, 88, 66, 0.4);
+    --wightColor: #fff;
+    --lightColor: rgba(255, 255, 255, 0.7);
+    --blackColor: #000;
+    --bgColor: #1f2641;
+    --bg1Color: #2e3267;
+    --bg2Color: #424890;
+
+    --containerWidthLarge: 80%;
+    --containerWidthMedium: 90%;
+    --containerWidthSmall: 94%;
+
+    --transition: all 400ms ease;
+}
+
+body {
+    font-family: 'Montserrat', 'Poppins', sans-serif;
+    line-height: 1.3;
+    color: var(--wightColor);
+    background: var(--bgColor);
+}
+
+.container {
+    width: var(--containerWidthLarge);
+    margin: 0 auto;
+}
+
+section {
+    padding: 6rem 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.4rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+h4 {
+    font-size: 1.3rem;
+}
+
+a {
+    color: var(--wightColor);
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    display: block;
+}
+
+.btn {
+    display: inline-block;
+    color: var(--blackColor);
+    background: var(--wightColor);
+    padding: 1rem 2rem;
+    border: 1px solid transparent;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background: transparent;
+    color: var(--wightColor);
+    border-color: var(--wightColor);
+}
+
+.btn-primary {
+    background: var(--dangerColor);
+    color: var(--wightColor);
+
+}
+
+/* ==================== PRELOADER ===================== */
+
+/* Styles for Preloader */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bgColor);
+    /* You can set the background color */
+    z-index: 9999;
+    display: flex;
+    /* border-radius: 5rem; */
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-bar {
+    display: grid;
+    align-items: center;
+    place-self: center;
+    place-items: center;
+    place-content: center;
+    justify-content: center;
+    width: 0%;
+    border-radius: 5rem;
+    height: 0.5rem;
+    /* Set the height of the progress bar */
+    background-color: var(--lightColor);
+    /* Progress bar color */
+    transition: width 0.5s ease;
+    /* Animation duration and timing function */
+}
+
+
+/* ==================== NAVBAR ===================== */
+
+nav {
+    background: transparent;
+    width: 100vw;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+.nav-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav button {
+    display: none;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    text-transform: capitalize;
+}
+
+.nav-menu a {
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.nav-menu a:hover {
+    color: var(--bg2Color);
+}
+
+/* asar by JavaSript */
+.scrolled {
+    box-shadow: 0 0.2rem 3rem rgba(0, 0, 0, 0.2);
+    background: var(--primaryColor);
+    border-radius: 0 1rem 2rem rgba(0, 0, 0, 0.368);
+}
+
+/* ========================== HEADER ======================== */
+
+header {
+    position: relative;
+    top: 5rem;
+    overflow: hidden;
+    height: 34rem;
+    margin-bottom: 8rem;
+}
+
+.header-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 5rem;
+    height: 100%;
+}
+
+.left-header p {
+    margin: 1rem 0 2.4rem;
+}
+
+.right-header img {
+    opacity: 0.75;
+    width: 100%;
+}
+
+/* ========================== CATEGORIES ======================== */
+
+.categories {
+    background: var(--bg1Color);
+    height: 28rem;
+}
+
+.categories h1 {
+    line-height: 1;
+    margin-bottom: 3rem;
+}
+
+.categories-container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    /* gap: 4rem; */
+}
+
+.left-categories {
+    margin-right: 4rem;
+}
+
+.left-categories p {
+    margin: 1rem 0 3rem;
+}
+
+.right-categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+}
+
+article {
+    z-index: 3;
+}
+
+.category {
+    background: var(--bg2Color);
+    padding: 2rem;
+    border-radius: 2rem;
+    transition: var(--transition);
+}
+
+.category:hover {
+    box-shadow: rgba(177, 177, 247, 0.605) 0px 50px 80px -20px, rgba(194, 193, 193, 0.701) 0px 30px 60px -30px;
+}
+
+.category-icon {
+    background: var(--primaryColor);
+    padding: 0.8rem;
+    border-radius: 0.9rem;
+}
+
+.category:nth-child(2) .category-icon {
+    background: var(--dangerColor);
+}
+
+.category:nth-child(3) .category-icon {
+    background: var(--successColor);
+}
+
+.category:nth-child(4) .category-icon {
+    background: var(--warningColor);
+}
+
+.category:nth-child(5) .category-icon {
+    background: var(--lightColor);
+}
+
+.category h5 {
+    margin: 2rem 0 1rem;
+}
+
+.category p {
+    font-size: 0.85rem;
+}
+
+/* ==================== COURSES ===================== */
+
+.courses {
+    margin-top: 10rem;
+}
+
+.courses-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.course {
+    scale: 0.9;
+    background: var(--bg1Color);
+    text-align: center;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.course:hover {
+    background: transparent;
+    border-color: var(--primaryColor);
+}
+
+.course-info {
+    padding: 2rem;
+}
+
+.course-info p {
+    margin: 1.2rem 0 2rem;
+    font-size: 0.9rem;
+}
+
+/* ==================== FAQs ===================== */
+
+.faqs {
+    background: var(--bg1Color);
+    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+}
+
+.faqs-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.faq {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    height: fit-content;
+    background: var(--primaryColor);
+    cursor: pointer;
+}
+
+.faq h4 {
+    font-size: 1rem;
+    line-height: 2.2;
+}
+
+.faq-icon {
+    align-self: flex-start;
+    font-size: 1.2rem;
+}
+
+.faq p {
+    margin-top: 0.8rem;
+    display: none;
+}
+
+.faq.open p {
+    display: block;
+}
+
+/* ================= TESTIMONIALS =================== */
+.testimonials-container {
+    overflow-x: hidden;
+    margin-bottom: 5rem;
+    position: relative;
+}
+
+.testimonial {
+    padding-top: 2rem;
+}
+
+.avatar {
+    width: 5.8rem;
+    height: 5.8rem;
+    border: 0.2rem solid var(--successColor);
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1rem;
+}
+
+.tesimonial-info {
+    text-align: center;
+}
+
+.testimonial-body {
+    background: var(--primaryColor);
+    padding: 2rem;
+    margin-top: 3rem;
+    position: relative;
+}
+
+.testimonial-body::before {
+    content: "";
+    display: block;
+    background: linear-gradient(135deg, transparent, var(--primaryColor), var(--primaryColor), var(--primaryColor));
+    /* background: red; */
+    width: 3rem;
+    height: 3rem;
+    top: -1.5rem;
+    transform: rotate(45deg);
+    position: absolute;
+    left: calc(50% - 1.5rem);
+}
+
+/* =================== FOOTER ==================== */
+footer {
+    background: var(--bg1Color);
+    padding-top: 5rem;
+    font-size: 0.9rem;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5rem;
+}
+
+.footer-container>div h4 {
+    margin-bottom: 1.2rem;
+}
+
+.footer1 p {
+    margin: 0 0 2rem;
+}
+
+footer ul li {
+    margin-bottom: 0.7rem;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+
+.footer-socials a {
+    transition: var(--transition);
+    color: rgb(78, 134, 255);
+    font-size: 1.5rem;
+    text-shadow: 2px 0 5px rgba(28, 28, 28, 0.8);
+}
+
+.footer-socials a:hover {
+    color: var(--lightColor);
+    text-decoration: none;
+    font-size: 1.8rem;
+    text-shadow: 0 0 0.5rem rgba(251, 251, 251, 0.368);
+}
+
+.details p i {
+    font-size: 0.7rem;
+    margin-left: -2rem;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 1.2rem 0;
+    border-top: 1px solid var(--bg2Color);
+}
+
+/* ========================= MEDIA QUERIES (TABLET) ========================== */
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: var(--containerWidthMedium);
+    }
+
+    h1 {
+        font-size: 2.1rem;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+    }
+
+    /* ======================== NAVBAR ======================== */
+    body {
+        overflow-x: hidden;
+    }
+
+    nav button {
+        display: inline-block;
+        background: transparent;
+        font-size: 1.8rem;
+        color: var(--wightColor);
+        cursor: pointer;
+    }
+
+    nav button#close-menu-btn {
+        display: none;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 5rem;
+        right: 5%;
+        height: fit-content;
+        width: 18rem;
+        flex-direction: column;
+        gap: 0;
+        display: none;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        height: 5.8rem;
+        animation: navItems 1s linear forwards;
+        transform-origin: top right;
+        opacity: 0;
+        transition: var(--transition);
+        transform: translateX(20rem);
+    }
+
+    .nav-menu li:nth-child(2) {
+        animation-delay: 200ms;
+    }
+
+    .nav-menu li:nth-child(3) {
+        animation-delay: 400ms;
+    }
+
+    .nav-menu li:nth-child(4) {
+        animation-delay: 600ms;
+    }
+
+    @keyframes navItems {
+        0% {
+            transform: rotateZ(-90deg) rotateX(-90deg);
+        }
+
+        25% {
+            opacity: 0.25;
+            transform: translateX(15rem) rotateZ(-67.5deg) rotateX(-67.5deg);
+        }
+
+        50% {
+            opacity: 0.5;
+            transform: translateX(10rem) rotateZ(-45deg) rotateX(-45deg);
+        }
+
+        75% {
+            opacity: 0.75;
+            transform: translateX(5rem) rotateZ(-22.5deg) rotateX(-22.5deg);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0) rotateZ(0) rotateX(0);
+        }
+
+    }
+
+    .nav-menu li a {
+        background: var(--primaryColor);
+        box-shadow: -4rem 6rem 10rem rgba(0, 0, 0, 0.6);
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+    }
+
+    .nav-menu li a:hover {
+        background: var(--bg2Color);
+        color: var(--wightColor);
+    }
+
+    /* ======================== HEADER ======================== */
+
+    header {
+        height: 30rem;
+        margin-bottom: 4rem;
+    }
+
+    .header-container {
+        gap: 0;
+        padding-bottom: 3rem;
+    }
+
+    .right-header img {
+        scale: 0.94;
+    }
+
+    /* ======================== CATEGORIES ======================== */
+
+    .categories {
+        height: fit-content;
+    }
+
+    .categories-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .left-categories {
+        margin-right: 0;
+    }
+
+    /* ======================== COURSES ======================== */
+
+    .courses {
+        margin-top: 0;
+    }
+
+    .courses-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* ======================== FAQs ======================== */
+
+    .faqs-container {
+        grid-template-columns: 1fr;
+    }
+
+    .faq {
+        padding: 1.5rem;
+    }
+
+    /* ======================== FOOTER ======================== */
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-socials {
+        position: relative;
+        top: 1rem;
+        left: 90%;
+    }
+
+    .footer1,
+    .footer2,
+    .footer3,
+    .footer4 {
+        position: relative;
+        left: 25%;
+    }
+
+    .footer1 p {
+        width: 75%;
+    }
+}
+
+/* ========================= MEDIA QUERIES (PHONES) ========================== */
+
+
+@media screen and (max-width:525px) {
+    .container {
+        width: var(--containerWidthSmall);
+    }
+
+    .btn {
+        display: inline-block;
+        color: var(--blackColor);
+        background: var(--wightColor);
+        padding: 0.5rem 1rem;
+        border: 1px solid transparent;
+        font-weight: 500;
+        font-size: 0.8rem;
+        transition: var(--transition);
+    }
+
+
+    .btn-primary {
+        background: var(--dangerColor);
+        color: var(--wightColor);
+    }
+
+    /* ======================== NAVBAR ======================== */
+
+    .nav-menu {
+        right: 3%;
+    }
+
+    /* ======================== HEADER ======================== */
+
+    header {
+        height: 34rem;
+    }
+
+    .header-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .left-header p {
+        margin-bottom: 1.3rem;
+    }
+
+    .right-header img {
+        margin-top: -2.7rem;
+        scale: 0.7;
+    }
+
+    /* ======================== CATEGORIES ======================== */
+
+    .right-categories {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+
+    .category {
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+
+    .category-icon {
+        margin-top: 4px;
+        display: inline-block;
+    }
+
+    /* ======================== COURSES ======================== */
+
+    .courses-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* ======================== TESTIMONIALS ======================== */
+
+    .testimonial-body {
+        padding: 1.2rem;
+    }
+
+    /* ======================== FOOTER ======================== */
+
+
+
+
+
+    .footer-socials {
+        justify-content: center;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer1,
+    .footer2,
+    .footer3,
+    .footer4 {
+        position: relative;
+        left: 25%;
+    }
+
+    .footer1 p {
+        width: 75%;
+    }
+
+    .footer-container {
+        font-size: 0.7rem;
+        position: relative;
+        gap: 1.2rem;
+    }
+
+    .footer-container>div h4 {
+        font-size: 1rem;
+    }
+
+    .footer-socials {
+        position: relative;
+        left: 54%;
+        top: 2rem;
+    }
+}

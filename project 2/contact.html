@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/contact.css">
+
+    <!-- RemixIcon CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- FontAwesome CDN-->
+    <script src="https://kit.fontawesome.com/7dfde3d1a3.js" crossorigin="anonymous"></script>
+
+    <!-- SWIPER JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <title>Education Website using HTML, CSS & JavaScript</title>
+</head>
+
+<body>
+ 
+    <nav>
+        <div class="container nav-container">
+            <a href="index.html">
+                <h4>EGATOR</h4>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button id="open-menu-btn"><i class="ri-menu-line"></i></button>
+            <button id="close-menu-btn"><i class="ri-close-fill"></i></button>
+        </div>
+    </nav>
+
+<section class="contact">
+    <div class="container contact-container">
+        <aside class="contact-aside">
+            <div class="aside-image">
+                <img src="./images/contact.webp" alt="">
+            </div>
+            <h2>Contact Us</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, autem. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex, quidem.</p>
+            <ul class="contact-details">
+                <li>
+                    <i class="ri-phone-line"></i>
+                    <h5>1234567890</h5>
+                </li>
+                <li>
+                    <i class="ri-mail-send-line"></i>
+                    <h5>example@example.com</h5>
+                </li>
+                <li>
+                    <i class="ri-map-pin-line"></i>
+                    <h5>location,country</h5>
+                </li>
+            </ul>
+            <ul class="contact-socials">
+                <li><a href="https://facebook.com"><i class="ri-facebook-circle-fill"></i></a></li>
+                <li><a href="https://twitter.com"><i class="ri-twitter-fill"></i></a></li>
+                <li><a href="https://instagram.com"><i class="ri-instagram-fill"></i></a></li>
+                <li><a href="https://linkedin.com"><i class="ri-linkedin-box-fill"></i></a></li>
+            </ul>
+        </aside>
+        <form  action="https://formspree.io/f/mknladrj"
+        method="POST">
+            <div class="form-name">
+                <input type="text" name="first name" placeholder="First Name" required>
+                <input type="text" name="Last name" placeholder="Last Name" required>
+            </div>
+            <input type="email" class="email" name="Email Address" placeholder="Your Email Address" required>
+            <textarea name="Message" rows="7" placeholder="Enter a beautiful message or feedback for our Team." required></textarea>
+            <button class="btn btn-primary" type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
+
+
+
+
+
+    <footer>
+        <div class="container footer-container">
+            <div class="footer1">
+                <a href="index.html" class="footer-logo">
+                    <h4>EGATOR</h4>
+                </a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam illo excepturi dolorem?</p>
+            </div>
+
+            <div class="footer2">
+                <h4>Permalinks</h4>
+                <ul class="permalinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer3">
+                <h4>Primacy</h4>
+                <ul class="primacy">
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer4">
+                <h4>Contact Us</h4>
+                <div class="details">
+                    <p><i class="ri-phone-line"></i> +91 91987 04352</p><br>
+                    <p><i class="ri-mail-fill"></i> being.ashutosh16.20@gmail.com</p>
+                </div>
+
+            </div>
+            <ul class="footer-socials">
+                <li><a href="#"><i class="ri-facebook-circle-fill"></i></a></li>
+                <li><a href="#"><i class="ri-twitter-fill"></i></a></li>
+                <li><a href="#"><i class="ri-instagram-fill"></i></a></li>
+                <li><a href="#"><i class="ri-linkedin-box-fill"></i></a></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <small>Copyright &copy; 2023 FINITE - All Rights Reserved</small>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script defer src="main.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            //   when vw is >= 600px
+            breakpoints: {
+                600: {
+                    slidesPerView: 2
+                }
+            }
+        });
+
+    </script>
+</body>
+
+</html>
